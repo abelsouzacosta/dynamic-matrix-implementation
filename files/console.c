@@ -1,6 +1,7 @@
 #include "../headers/console.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void write_console(char *str, ...) {
   va_list args;
@@ -24,4 +25,12 @@ void callout(char *str, ...) {
   printf("\033[0;33m");
   vprintf(str, args);
   printf("\033[0m");
+}
+
+void clear_screen() {
+#ifdef _WIN32
+  system("cls");
+#else
+  system("clear");
+#endif
 }

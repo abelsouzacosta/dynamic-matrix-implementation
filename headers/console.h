@@ -7,4 +7,6 @@ void throw_error(char *str, ...); // color set red
 
 void callout(char *str, ...); // color set yellow
 
+void clear_screen(); // clears the screen on terminal
+
 #endif
