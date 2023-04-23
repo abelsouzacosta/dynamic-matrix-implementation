@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 int **create_matrix(int rows, int columns) {
-  callout("Criando a Matriz");
+  callout("Criando a Matriz\n");
   int **matrix = (int **)calloc(rows, sizeof(int *));
   for (int r = 0; r < rows; r += 1) {
     matrix[r] = (int *)calloc(columns, sizeof(int));
